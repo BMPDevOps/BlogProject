@@ -6,4 +6,6 @@ public interface ObjectStorage {
 
     String uploadFile(String bucketName, String directory, MultipartFile file);
 
+    void deleteFile(String bucketName, String directory, String fileName);
+
 }

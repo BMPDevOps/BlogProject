@@ -2,6 +2,8 @@ package org.example.blogproject.service;
 
 import io.minio.MinioClient;
 import io.minio.PutObjectArgs;
+import io.minio.RemoveObjectArgs;
+import io.minio.RemoveObjectsArgs;
 import io.minio.errors.*;
 import org.example.blogproject.config.MinioConfig;
 import org.springframework.stereotype.Service;
@@ -38,5 +40,16 @@ public class MinioService implements ObjectStorage {
             throw new RuntimeException(e);
         }
         return fileName;
+    }
+
+    @Override
+    public void deleteFile(String bucketName, String directory, String fileName) {
+        try {
+            client.removeObject(RemoveObjectArgs.builder().bucket(bucketName).object(directory+"/"+fileName).build());
+        } catch (ServerException | ErrorResponseException | InsufficientDataException | IOException |
+                NoSuchAlgorithmException | InvalidKeyException | InvalidResponseException | XmlParserException |
+                InternalException e) {
+            throw new RuntimeException(e);
+        }
     }
 }
