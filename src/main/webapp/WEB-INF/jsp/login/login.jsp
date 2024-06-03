@@ -4,7 +4,6 @@
 <%@taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 <!DOCTYPE html>
 <html>
-<c:set var="root" value="${pageContext.request.contextPath}"/>
 <head>
 	<meta charset="UTF-8">
 	<title>Insert title here</title>
@@ -58,7 +57,7 @@
 <footer>
 	<a href="login/searchPwd">비밀번호 찾기</a>
 	<a href="login/searchId" class="footer-mid">아이디찾기</a>
-	<a href="login/newMember" class="footer-end">회원가입</a>
+	<a href="/signup" class="footer-end">회원가입</a>
 </footer>
 
 </body>

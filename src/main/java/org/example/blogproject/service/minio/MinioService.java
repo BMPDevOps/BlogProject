@@ -1,4 +1,4 @@
-package org.example.blogproject.service;
+package org.example.blogproject.service.minio;
 
 import io.minio.MinioClient;
 import io.minio.PutObjectArgs;

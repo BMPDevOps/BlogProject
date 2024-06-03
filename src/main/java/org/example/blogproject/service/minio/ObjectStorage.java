@@ -1,4 +1,4 @@
-package org.example.blogproject.service;
+package org.example.blogproject.service.minio;
 
 import org.springframework.web.multipart.MultipartFile;
 
