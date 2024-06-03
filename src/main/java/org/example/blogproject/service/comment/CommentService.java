@@ -1,7 +1,6 @@
 package org.example.blogproject.service.comment;
 
 import lombok.RequiredArgsConstructor;
-import org.apache.ibatis.annotations.Mapper;
 import org.example.blogproject.dto.CommentDto;
 import org.example.blogproject.mapper.CommentMapperInterface;
 import org.springframework.stereotype.Service;
