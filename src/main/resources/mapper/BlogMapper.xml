@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.example.blogproject.mapper.BlogMapperInterface">
+
+    <select id="blogFindById" parameterType="String" resultType="int">
+        select count(*) from blog where id = #{id}
+    </select>
+
+    <insert id="blogSave" parameterType="BlogDto">
+        insert into blog(id, blog_name, reg_date) value (#{id}, #{name}, now())
+    </insert>
+
+    <select id="blogFindByIdJoin" resultType="map">
+        select * from blog INNER JOIN user ON blog.id = user.id;
+    </select>
+</mapper>

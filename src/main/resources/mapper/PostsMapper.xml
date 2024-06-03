@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.example.blogproject.mapper.PostMapperInterface">
+    <insert id="postsSave" parameterType="PostsDto">
+        insert into posts(blog_idx, title, content, posting_date) value (#{blogIdx}, #{title}, #{content}, now())
+    </insert>
+
+    <update id="postsUpdate" parameterType="PostsDto">
+        update posts set title = #{title}, content = #{content} where post_idx = #{idx}
+    </update>
+
+    <select id="postsFindByBlogId" parameterType="int" resultType="PostsDto">
+        select * from posts where blog_idx = #{idx}
+    </select>
+
+    <select id="postsFindByPostsId" parameterType="int" resultType="PostsDto">
+        select * from posts where post_idx = #{idx}
+    </select>
+
+    <delete id="postsDeleteByPostsId" parameterType="int">
+        delete from posts  where post_idx = #{idx}
+    </delete>
+</mapper>

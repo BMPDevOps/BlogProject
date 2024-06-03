@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.example.blogproject.mapper.CommentMapperInterface">
+
+    <select id="commentFindByPostsId" parameterType="int" resultType="CommentDto">
+        select *
+        from comment
+        where post_idx = #{idx}
+        order by comment_idx;
+    </select>
+
+    <insert id="commentSave" parameterType="commentDto">
+        insert into comment(comment_idx, post_idx, comment, comment_date)
+        VALUE (#{commentIdx}, #{postIdx}, #{comment}, now());
+    </insert>
+
+    <update id="commentUpdate" parameterType="commentDto">
+        update comment
+        set comment = #{comment}
+        where comment_idx = #{idx}
+    </update>
+
+    <delete id="commentDeleteByCommentId" parameterType="int">
+        delete
+        from comment
+        where comment_idx = #{idx}
+    </delete>
+
+</mapper>
