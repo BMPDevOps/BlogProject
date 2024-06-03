@@ -3,7 +3,6 @@ package org.example.blogproject.service;
 import io.minio.MinioClient;
 import io.minio.PutObjectArgs;
 import io.minio.RemoveObjectArgs;
-import io.minio.RemoveObjectsArgs;
 import io.minio.errors.*;
 import org.example.blogproject.config.MinioConfig;
 import org.springframework.stereotype.Service;

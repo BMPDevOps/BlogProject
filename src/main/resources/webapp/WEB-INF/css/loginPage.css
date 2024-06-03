@@ -1,0 +1,165 @@
+body * {
+	font-family: 'Jua';
+	box-sizing: border-box;
+}
+
+header {
+	margin: 100px auto 0;
+	width: 300px;
+}
+
+.logo {
+	font-size: 50px;
+	text-align: center;
+	background-color: pink;
+}
+
+/*--------------------*/
+main {
+	padding: 50px;
+}
+
+main>div {
+	border: 1px solid gray;
+	border-radius: 10px;
+	width: 550px;
+	height: 375px;
+	margin: 0 auto;
+	
+}
+
+
+.inBox {
+	width: 100%;
+	height: 150px;
+	font-size: 17px;
+	padding: 30px 20px 0px;
+}
+
+.id {
+	border: 1px solid gray;
+	border-top-left-radius: 20px;
+	border-top-right-radius: 20px;
+	width: 100%;
+	height: 48px;
+	
+}
+
+#inputId{
+	font-size: 17px;
+	padding: 10px;
+}
+
+.passwd {
+	border: 1px solid gray;
+	
+	border-bottom-left-radius: 20px;
+	border-bottom-right-radius: 20px;
+	width: 100%;
+	height: 48px;
+	
+}
+
+#inputPwd{
+	font-size: 17px;
+	padding: 10px;
+}
+/*----------------id, pwd----------------*/
+.loginBox{
+	margin: 0 20px 20px;
+}
+.login{
+	width: 100%;
+	height: 50px;
+	border-radius: 20px;
+	
+	background: lightgray;
+}
+.login:hover{
+	background: gray;
+}
+/*----------login checkBox----------*/
+.wrapper {
+  width: 200px;
+  height: auto;
+  text-align: center;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.wrapper div{
+	display: flex;
+	align-items: center;
+}
+
+#switch {
+  position: absolute;
+  /* hidden */
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+.switch_label {
+  position: relative;
+  cursor: pointer;
+  display: inline-block;
+  width: 60px;
+  height: 30px;
+  background: #fff;
+  border: 2px solid #daa;
+  border-radius: 20px;
+  transition: 0.2s;
+}
+.switch_label:hover {
+  background: #efefef;
+}
+.onf_btn {
+  position: absolute;
+  top: 4px;
+  left: 3px;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border-radius: 20px;
+  background: #daa;
+  transition: 0.2s;
+}
+
+/* checking style */
+#switch:checked+.switch_label {
+  background: #c44;
+  border: 2px solid #c44;
+}
+
+#switch:checked+.switch_label:hover {
+  background: #e55;
+}
+
+/* move */
+#switch:checked+.switch_label .onf_btn {
+  left: 34px;
+  background: #fff;
+  box-shadow: 1px 2px 3px #00000020;
+}
+/*------------login check box end-----------------*/
+
+/*footer*/
+footer {	
+	width: 500px;
+	height: auto;
+	margin: 0 auto;
+}
+
+footer a{
+	font-size: 22px;
+	flex: 1;
+	text-align: right;
+	color: gray;
+}
+
+.footer-mid{
+	border-left: 1px solid gray; 
+	border-right: 1px solid gray;
+	left: 50%;
+}
