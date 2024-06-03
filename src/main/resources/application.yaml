@@ -2,6 +2,13 @@ spring:
   application:
     name: BlogProject
 
+  mvc:
+    view:
+      prefix: /WEB-INF/jsp/
+      suffix: .jsp
+
+
+
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
     url: ${MYSQL_HOST}
