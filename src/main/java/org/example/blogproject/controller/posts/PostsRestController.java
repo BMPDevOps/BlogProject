@@ -38,4 +38,6 @@ public class PostsRestController {
     public void postsDeleteByPostsId(@RequestParam int idx) {
         postsService.postsDeleteByPostsId(idx);
     }
+
+    
 }

@@ -15,6 +15,6 @@ public class BlogDto {
 
   private long blogIdx;
   private String id;
-  private String blogName;
+  private String blog_name;
   private java.sql.Timestamp regDate;
 }

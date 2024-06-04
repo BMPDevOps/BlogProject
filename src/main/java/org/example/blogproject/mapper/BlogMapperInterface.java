@@ -12,4 +12,10 @@ public interface BlogMapperInterface {
     void blogSave(BlogDto dto);
 
     List<Map<String, Object>> blogFindByIdJoin();
+
+    BlogDto blogFindByIdx(int blog_idx);
+
+    int blogCheckById(String id);
+
+
 }

@@ -14,9 +14,10 @@ public class LoginRestController {
 
     // 로그인 로직
     @PostMapping("/login/check")
-    public Boolean loginCheck(@RequestParam String id,
+    public boolean loginCheck(@RequestParam String id,
                               @RequestParam String passwd,
                               HttpSession session){
+
         if(userService.userCheckByIdAndPassword(id, passwd) >= 1){
             session.setAttribute("id",id);
             session.setAttribute("passwd",passwd);
@@ -24,4 +25,7 @@ public class LoginRestController {
         }
         return false;
     }
+
+
+
 }

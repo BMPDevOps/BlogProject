@@ -1,0 +1,47 @@
+body * {
+    box-sizing: border-box;
+}
+
+header {
+    width: 100%;
+    height: 50px;
+}
+
+header {
+    margin: 150px auto 0;
+    width: 800px;
+    height: 150px;
+    text-align: center;
+}
+
+header span{
+    position: relative;
+    justify-items: center;
+    font-size: 30px;
+    width: 100%;
+    height: 100%;
+}
+
+.postBoard {
+    margin: 10px auto;
+    width: 800px;
+    justify-items: center;
+
+}
+
+#postTitle {
+    position: relative;
+    margin: 0 auto;
+    width: 700px;
+}
+#postUpload {
+    position: relative;
+    width: 70px;
+    float: right;
+}
+
+#postContent {
+    margin: 30px auto 0;
+    width: 800px;
+    height: 600px;
+}

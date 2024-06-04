@@ -14,6 +14,7 @@
 		  rel="stylesheet">
 	<script src="https://code.jquery.com/jquery-3.7.0.js"></script>
 	<link rel="stylesheet" type="text/css" href="css/loginPage.css">
+	<script src="js/loginPage.js"></script>
 </head>
 <body>
 <header>
@@ -22,13 +23,13 @@
 
 <main>
 	<div class="mainBox">
-		<form action="login" method="post">
+		<form id="loginForm" method="post">
 			<div class="inBox">
 				<div class="id">
 					<input type="text" name="id" class="id" id="inputId" placeholder="이메일, 전화번호">
 				</div>
 				<div class="passwd">
-					<input type="text" name="passwd" class="passwd" id="inputPwd" placeholder="비밀번호">
+					<input type="password" name="passwd" class="passwd" id="inputPwd" placeholder="비밀번호">
 				</div>
 			</div>
 			<div class="loginBox">

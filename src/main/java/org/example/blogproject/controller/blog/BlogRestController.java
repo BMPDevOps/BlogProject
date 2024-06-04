@@ -1,5 +1,6 @@
 package org.example.blogproject.controller.blog;
 
+import jakarta.servlet.http.HttpSession;
 import lombok.RequiredArgsConstructor;
 import org.example.blogproject.dto.BlogDto;
 import org.example.blogproject.service.blog.BlogService;
@@ -19,7 +20,16 @@ public class BlogRestController {
 
     }
     @PostMapping("/save")
-    public void blogSave(@ModelAttribute BlogDto dto) {
+    public void blogSave(@ModelAttribute BlogDto dto,
+                         HttpSession session) {
+        dto.setId((String) session.getAttribute("id"));
         blogService.blogSave(dto);
+    }
+
+    @PostMapping("/blogCheck")
+    public boolean blogCheckById(HttpSession session)
+    {
+        String id = (String) session.getAttribute("id");
+        return blogService.blogCheckById(id);
     }
 }

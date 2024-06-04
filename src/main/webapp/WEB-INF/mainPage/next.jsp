@@ -10,14 +10,35 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.0/font/bootstrap-icons.css">
 <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Dancing+Script:wght@400..700&family=East+Sea+Dokdo&family=Jua&family=Gaegu&family=Gamja+Flower&family=Pacifico&family=Single+Day&display=swap" rel="stylesheet">
-   <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
-   <style>
-       body *{
-           font-family: 'Jua';
-       }
-   </style>
+    <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+    <link rel="stylesheet" type="text/css" href="/css/main.css">
+    <script src="js/main.js"></script>
 </head>
 <body>
-	성공
+
+<header class="loginButton">
+    <c:if test="${sessionScope.id == null}">
+        <button type="button" id="loginButton" onclick="location.href='/login'">login</button>
+    </c:if>
+    <c:if test="${sessionScope.id != null}">
+        <button type="button" id="logoutButton" onclick="location.href='/logout'">logout</button>
+    </c:if>
+</header>
+
+<div class="title">
+    <span class="title">메인 게시판</span>
+</div>
+
+<div class="mainBoard">
+    <div class="listMap">
+        <span >리스트 목록</span>
+    </div>
+    <br>
+    <div class="listPost">
+        <div id="postPrint"></div>
+    </div>
+
+</div>
+
 </body>
 </html>

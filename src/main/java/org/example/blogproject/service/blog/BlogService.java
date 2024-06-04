@@ -20,4 +20,10 @@ public class BlogService {
     public List<Map<String, Object>> blogFindByIdJoin() {
         return blogMapperInterface.blogFindByIdJoin();
     }
+
+    public BlogDto blogFindByIdx(int blog_idx) {return blogMapperInterface.blogFindByIdx(blog_idx);}
+
+    public boolean blogCheckById(String id) {
+        return blogMapperInterface.blogCheckById(id) >=1;
+    }
 }

@@ -29,7 +29,7 @@
 
 </head>
 <body>
-<form action="" method="post" enctype="multipart/form-data"
+<form action="${pageContext.request.contextPath}/signup/insertUser" method="post" enctype="multipart/form-data"
 	  onsubmit="return check()">
 	<div class="form-header">
 		<h2>
@@ -50,7 +50,7 @@
 				<div class="form-group row">
 					<label for="myid" class="col-sm-2 col-form-label">아이디</label>
 					<div class="col-sm-8">
-						<input type="text" name="myid" id="myid" class="form-control"
+						<input type="text" name="id" id="myid" class="form-control"
 							   required>
 					</div>
 					<div class="col-sm-2">
