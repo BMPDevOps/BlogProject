@@ -10,16 +10,18 @@ $(function(){
             s += `
             <table>
             `
-            data.forEach(function(postItem){
-                s+=`
+            data.forEach(function(postItem) {
+                s += `
                     <tr>
                         <td>
-                            <a href="posts/find?post_idx=${postItem.post_idx}">${postItem.title}</a>
+                            <a href="/posts/postPage?post_idx=${postItem.post_idx}">${postItem.title}</a>
+                          
                         </td>
                     </tr>
                 `
+                //<a href="posts/find?post_idx=${postItem.post_idx}">${postItem.title}</a>
             })
-            s+= "</table>"
+            s += "</table>"
             $("#postList").append(s);
         }
     })

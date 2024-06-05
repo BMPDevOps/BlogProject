@@ -11,7 +11,7 @@ header {
 .logo {
     font-size: 50px;
     text-align: center;
-    background-color: pink;
+
 }
 
 /*--------------------*/
@@ -146,8 +146,14 @@ main>div {
 
 /*footer*/
 footer {
-    width: 500px;
     height: auto;
+    margin: 0 auto;
+    justify-items: center;
+    align-items: center;
+}
+
+footer div{
+    width: 305px;
     margin: 0 auto;
 }
 
@@ -161,5 +167,5 @@ footer a{
 .footer-mid{
     border-left: 1px solid gray;
     border-right: 1px solid gray;
-    left: 50%;
+
 }

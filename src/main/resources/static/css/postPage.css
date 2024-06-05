@@ -1,0 +1,31 @@
+body * {
+    font-family: 'Jua';
+    box-sizing: border-box;
+}
+
+.button {
+    float: right;
+    width: 200px;
+}
+
+#back {
+    width: 100%;
+
+}
+
+.postTitle {
+    width: 800px;
+    height: 100px;
+    margin: 100px auto 0;
+    text-align: center;
+    font-size: 50px;
+}
+
+.postContent {
+    border: 1px solid gray;
+    width: 800px;
+    height: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    font-size: 25px;
+}

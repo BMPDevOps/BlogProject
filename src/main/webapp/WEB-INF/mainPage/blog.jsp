@@ -15,14 +15,20 @@
 <script src="js/blog.js"></script>
 <input type="hidden" id="blog_idx" value="${dto.blog_idx}">
 <body>
-    <header class="head" id="userPost">
+    <div class="button">
+        <button id="back" type="button" onclick="history.back()">back</button>
+    </div>
+    <br>
+    <div class="title" id="userPost">
         <span>${dto.id}의 블로그</span>
-    </header>
+    </div>
+
     <c:if test="${dto.id == sessionScope.id}">
         <div class="writeButton">
             <button type="button" id="writeButton" onclick="location.href='/posts/postWrite?blog_idx=${dto.blog_idx}'">글쓰기</button>
         </div>
     </c:if>
+
     <div id="postList" class="postList">
     </div>
 

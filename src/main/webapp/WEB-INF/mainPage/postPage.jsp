@@ -11,10 +11,17 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.0/font/bootstrap-icons.css">
     <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Dancing+Script:wght@400..700&family=East+Sea+Dokdo&family=Jua&family=Gaegu&family=Gamja+Flower&family=Pacifico&family=Single+Day&display=swap" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
-    <link rel="stylesheet" type="text/css" href="/css/main.css">
-    <script src="js/main.js"></script>
-</head>
-<body>
 
+    <link rel="stylesheet" type="text/css" href="/css/postPage.css">
+    <script src="/js/postPage.js"></script>
+</head>
+
+<body class="postPage">
+    <input type="hidden" id="post_idx" name="post_idx" value="${post_idx}">
+
+    <div class="button"><button type="button" id="back" onclick="history.back()">back</button></div>
+    <br>
+    <div class="postTitle" id="postTitle"></div>
+    <div class="postContent" id="postContent"></div>
 </body>
 </html>

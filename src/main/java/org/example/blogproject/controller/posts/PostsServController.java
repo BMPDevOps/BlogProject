@@ -18,4 +18,11 @@ public class PostsServController {
         model.addAttribute("blog_idx", blog_idx);
         return"mainPage/postWrite";
     }
+
+    @GetMapping("/postPage")
+    public String postPage(@RequestParam int post_idx,
+                           Model model){
+        model.addAttribute("post_idx", post_idx);
+        return "mainPage/postPage";
+    }
 }

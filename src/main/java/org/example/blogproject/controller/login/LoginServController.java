@@ -38,4 +38,15 @@ public class LoginServController {
     public String newBlogPage() {
         return "mainPage/newBlog";
     }
+
+    @GetMapping("/searchId")
+    public String searchId(){
+        return "login/searchId";
+    }
+    
+    @GetMapping("/searchPwd")
+    public String searchPwd(){
+        return "login/searchPwd";
+    }
+
 }

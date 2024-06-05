@@ -56,9 +56,11 @@
 	</div>
 </main>
 <footer>
-	<a href="login/searchPwd">비밀번호 찾기</a>
-	<a href="login/searchId" class="footer-mid">아이디찾기</a>
-	<a href="/signup" class="footer-end">회원가입</a>
+	<div>
+		<a href="/searchPwd">비밀번호 찾기</a>
+		<a href="/searchId" class="footer-mid">아이디찾기</a>
+		<a href="/signup" class="footer-end">회원가입</a>
+	</div>
 </footer>
 
 </body>
