@@ -13,7 +13,7 @@
     <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
 
     <link rel="stylesheet" type="text/css" href="/css/postWrite.css">
-    <script src="js/postWrite.js"></script>
+    <script src="/js/postWrite.js"></script>
 
 </head>
 <body>
@@ -24,13 +24,13 @@
     </header>
 
     <div class="postBoard">
-        <form action="/posts/save" id="inputPost">
-            <input type="hidden" name="blog_idx" value="">
+        <form accept-charset="utf-8" id="inputPost">
+            <input type="hidden" id="blog_idx" name="blog_idx" value="${blog_idx}">
             <div>
-                <input type="text" name="title" id="postTitle">
+                <input type="text" name="title" id="postTitle" required/>
                 <button type="submit" id="postUpload">click</button>
             </div>
-            <input type="text" name="content" id="postContent">
+            <input type="text" name="content" id="postContent" required/>
         </form>
     </div>
 

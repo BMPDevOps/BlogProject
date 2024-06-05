@@ -15,11 +15,11 @@ import java.sql.Timestamp;
 @NoArgsConstructor
 public class PostsDto {
 
-  private long postIdx;
-  private long blogIdx;
+  private long post_idx;
+  private long blog_idx;
   private String title;
   private String content;
-  private Timestamp postingDate;
+  private Timestamp posting_date;
 
 
 }

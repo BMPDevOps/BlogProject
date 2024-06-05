@@ -32,10 +32,7 @@ public class LoginServController {
         return "mainPage/next";
     }
 
-    @GetMapping("/postWrite")
-    public String writePage() {
-        return"mainPage/postWrite";
-    }
+
 
     @GetMapping("/newBlog")
     public String newBlogPage() {

@@ -13,7 +13,7 @@ import org.apache.ibatis.type.Alias;
 @Alias("BlogDto")
 public class BlogDto {
 
-  private long blogIdx;
+  private long blog_idx;
   private String id;
   private String blog_name;
   private java.sql.Timestamp regDate;
