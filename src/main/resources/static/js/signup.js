@@ -2,7 +2,7 @@ let jungbok=false;
 
 $(function(){
 
-    $("#photo").change(function(){
+    $("#file").change(function(){
         //console.log($(this)[0]);//type 이 file 인경우 배열타입으로 넘어온다
         let reg=/(.*?)\/(jpg|jpeg|png|gif)$/;
         let f=$(this)[0].files[0];
@@ -49,27 +49,23 @@ $(function(){
 
     $("#signup").submit(function (e){
         e.preventDefault();
-        let url = $(this).attr("action");
         let form = $("#signup")[0];
-        console.log(form)
         let formData = new FormData(form);
-        console.log($(this))
-        console.log(formData)
 
         $.ajax({
-            url:url,
+            url:"/signup/insertUser",
             type:"post",
-            dataType:"json",
             data:formData,
             contentType : false,
             processData: false,
             cache:false,
-            success:function (e){
+            success:function (){
                 alert("회원가입 성공")
                 location.href = "/main"
             },
-            error: function (){
+            error: function (e){
                 alert("회원가입 에러")
+                console.log(e)
             }
             
         })

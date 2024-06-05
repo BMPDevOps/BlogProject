@@ -29,7 +29,7 @@
 
 </head>
 <body>
-<form  action="${pageContext.request.contextPath}/signup/insertUser" id="signup" method="post" enctype="multipart/form-data"
+<form  id="signup" method="post" enctype="multipart/form-data"
 	  onsubmit="return check()">
 	<!-- action="${pageContext.request.contextPath}/signup/insertUser" method="post" enctype="multipart/form-data"
 	  onsubmit="return check()" -->
@@ -87,9 +87,7 @@
 			</div>
 			<div class="right">
 				<img src="" id="showimg" onerror="this.src='/img/noimage1.png'">
-				<input type="file" class="form-control" name="photo" id="photo" required="required">
-
-
+				<input type="file" class="form-control" name="file" id="file" required="required">
 			</div>
 		</div>
 		<div class="form-group row">
