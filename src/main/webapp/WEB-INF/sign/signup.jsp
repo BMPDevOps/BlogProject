@@ -29,8 +29,10 @@
 
 </head>
 <body>
-<form action="${pageContext.request.contextPath}/signup/insertUser" method="post" enctype="multipart/form-data"
+<form  action="${pageContext.request.contextPath}/signup/insertUser" id="signup" method="post" enctype="multipart/form-data"
 	  onsubmit="return check()">
+	<!-- action="${pageContext.request.contextPath}/signup/insertUser" method="post" enctype="multipart/form-data"
+	  onsubmit="return check()" -->
 	<div class="form-header">
 		<h2>
 			<b>회원 가입</b>
@@ -48,9 +50,9 @@
 				</div>
 
 				<div class="form-group row">
-					<label for="myid" class="col-sm-2 col-form-label">아이디</label>
+					<label for="id" class="col-sm-2 col-form-label">아이디</label>
 					<div class="col-sm-8">
-						<input type="text" name="id" id="myid" class="form-control"
+						<input type="text" name="id" id="id" class="form-control"
 							   required>
 					</div>
 					<div class="col-sm-2">
@@ -85,7 +87,7 @@
 			</div>
 			<div class="right">
 				<img src="" id="showimg" onerror="this.src='/img/noimage1.png'">
-				<input type="file" class="form-control" name="file" id="file" required="required">
+				<input type="file" class="form-control" name="photo" id="photo" required="required">
 
 
 			</div>

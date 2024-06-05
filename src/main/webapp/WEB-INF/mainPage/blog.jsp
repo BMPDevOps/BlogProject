@@ -24,7 +24,6 @@
         </div>
     </c:if>
     <div id="postList" class="postList">
-
     </div>
 
 </body>
